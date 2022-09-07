@@ -9,9 +9,17 @@ class BoxStateToIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return boxState == BoxState.circle
-        ? const Icon(Icons.lens_outlined, size: 100.0)
+        ? const Icon(
+            Icons.lens_outlined,
+            size: 100.0,
+            color: Colors.white,
+          )
         : boxState == BoxState.cross
-            ? const Icon(Icons.close, size: 120.0)
+            ? const Icon(
+                Icons.close,
+                size: 120.0,
+                color: Colors.white,
+              )
             : Container();
   }
 }
