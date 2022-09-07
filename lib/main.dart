@@ -1,9 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:tic_tac_toe/enum/box_state.dart';
+import 'package:tic_tac_toe/widgets/box_state_to_icon.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+//First Row
+  BoxState a = BoxState.empty;
+  BoxState b = BoxState.empty;
+  BoxState c = BoxState.empty;
+
+//Second Row
+  BoxState d = BoxState.empty;
+  BoxState e = BoxState.empty;
+  BoxState f = BoxState.empty;
+
+//Third Row
+  BoxState g = BoxState.empty;
+  BoxState h = BoxState.empty;
+  BoxState i = BoxState.empty;
 
   @override
   Widget build(BuildContext context) {
@@ -31,15 +48,45 @@ class MyApp extends StatelessWidget {
                 crossAxisSpacing: 6.0,
                 crossAxisCount: 3,
                 children: [
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
-                  Container(color: Colors.blueAccent),
+                  // First Row
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: a),
+                  ),
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: b),
+                  ),
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: c),
+                  ),
+                  // Second Row
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: d),
+                  ),
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: e),
+                  ),
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: f),
+                  ),
+                  // Third Row
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: g),
+                  ),
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: h),
+                  ),
+                  Container(
+                    color: Colors.blueAccent,
+                    child: BoxStateToIcon(boxState: i),
+                  ),
                 ],
               ),
             ),
